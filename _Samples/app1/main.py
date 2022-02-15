@@ -15,7 +15,7 @@ def main():
     positions = ["captain", "private", "corporal", "private first class", "staff-sergeant", "private"]
     specialities = ["research engineer", "research engineer", "life support engineer",
                     "drone pilot", "medic", "builder"]
-    addresses = ["module 1", "module 1", "module 2", "module 3", "module 2", "module 3"]
+    addresses = ["module_1", "module_1", "module_2", "module_3", "module_2", "module_3"]
     emails = ["scott_chief@mars.org", "michael_singer@mars.org", "foreigner_guy@mars.org",
               "arma_III@mars.org", "stereotypical_name@mars.org", "science4life@mars.org"]
     db_sess = db_session.create_session()
@@ -30,14 +30,14 @@ def main():
         user.email = emails[i]
         db_sess.add(user)
     ##### ADD JOB
-    job = Jobs()
-    job.team_leader = 1
-    job.job = "deployment of residential modules 1 and 2"
-    job.work_size = 15
-    job.collaborators = "1, 3"
-    #job.data is default (now)
-    job.is_finished = False
-    db_sess.add(job)
+    #job = Jobs()
+    #job.team_leader = 1
+    #job.job = "deployment of residential modules 1 and 2"
+    #job.work_size = 15
+    #job.collaborators = "1, 3"
+    ##job.data is default (now)
+    #job.is_finished = False
+    #db_sess.add(job)
     db_sess.commit()
     #app.run()
 
